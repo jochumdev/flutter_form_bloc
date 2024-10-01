@@ -261,7 +261,7 @@ class ListFieldsForm extends StatelessWidget {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.red,
+                              backgroundColor: Colors.red,
                             ),
                             onPressed: formBloc.clearMember,
                             child: const Text('CLEAR MEMBER'),
@@ -378,7 +378,7 @@ class MemberCard extends StatelessWidget {
                   child: const Text('ADD HOBBY'),
                 ),
                 TextButton(
-                  style: TextButton.styleFrom(primary: Colors.red),
+                  style: TextButton.styleFrom(foregroundColor: Colors.red),
                   onPressed: onClearHobby,
                   child: const Text('CLEAR HOBBY'),
                 ),
@@ -405,8 +405,8 @@ class LoadingDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async => false,
+    return PopScope(
+      canPop: false,
       child: Center(
         child: Card(
           child: Container(
