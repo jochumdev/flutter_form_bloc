@@ -12,7 +12,7 @@ class TextFieldBlocState<ExtraData>
     required Suggestions<String>? suggestions,
     required bool isValidated,
     required bool isValidating,
-    FormBloc? formBloc,
+    FormBloc<dynamic, dynamic>? formBloc,
     required String name,
     dynamic Function(String value)? toJson,
     ExtraData? extraData,
@@ -53,7 +53,7 @@ class TextFieldBlocState<ExtraData>
     Param<Suggestions<String>?>? suggestions,
     bool? isValidated,
     bool? isValidating,
-    Param<FormBloc?>? formBloc,
+    Param<FormBloc<dynamic, dynamic>?>? formBloc,
     Param<ExtraData?>? extraData,
   }) {
     return TextFieldBlocState(

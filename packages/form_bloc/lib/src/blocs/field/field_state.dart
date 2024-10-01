@@ -11,7 +11,7 @@ mixin FieldBlocStateBase {
   bool get isValid;
 
   /// Identifies whether the FieldBloc has been added to the FormBloc
-  FormBloc? get formBloc;
+  FormBloc<dynamic, dynamic>? get formBloc;
 
   bool get hasFormBloc => formBloc != null;
 }
@@ -61,7 +61,7 @@ abstract class FieldBlocState<Value, Suggestion, ExtraData> extends Equatable
 
   /// The current [FormBloc] that contains this `FieldBloc`.
   @override
-  final FormBloc? formBloc;
+  final FormBloc<dynamic, dynamic>? formBloc;
 
   /// Transform [value] in a JSON value.
   /// By default returns [value], but you can
@@ -145,7 +145,7 @@ abstract class FieldBlocState<Value, Suggestion, ExtraData> extends Equatable
     Param<Suggestions<Suggestion>?>? suggestions,
     bool? isValidated,
     bool? isValidating,
-    Param<FormBloc?> formBloc,
+    Param<FormBloc<dynamic, dynamic>?> formBloc,
     Param<ExtraData>? extraData,
   });
 
@@ -191,7 +191,7 @@ abstract class FieldBlocState<Value, Suggestion, ExtraData> extends Equatable
 abstract class MultiFieldBlocState<ExtraData> extends Equatable
     with FieldBlocStateBase {
   @override
-  final FormBloc? formBloc;
+  final FormBloc<dynamic, dynamic>? formBloc;
 
   @override
   final String name;
@@ -215,7 +215,7 @@ abstract class MultiFieldBlocState<ExtraData> extends Equatable
   Iterable<FieldBloc> get flatFieldBlocs;
 
   MultiFieldBlocState<ExtraData> copyWith({
-    Param<FormBloc?>? formBloc,
+    Param<FormBloc<dynamic, dynamic>?>? formBloc,
     bool? isValidating,
     bool? isValid,
     Param<ExtraData>? extraData,

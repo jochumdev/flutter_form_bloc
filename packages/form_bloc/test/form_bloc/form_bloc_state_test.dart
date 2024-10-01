@@ -30,7 +30,7 @@ void main() {
           deleteFailed.toDeleteSuccessful(successResponse: 'success');
       final uploadingFields = deleteSuccessful.toUpdatingFields();
 
-      final states = <FormBlocState>[
+      final states = <FormBlocState<dynamic, dynamic>>[
         loadingState,
         loadFailed,
         loaded1,
@@ -44,7 +44,7 @@ void main() {
         uploadingFields,
       ];
 
-      final expectedStates = <FormBlocState>[
+      final expectedStates = <FormBlocState<dynamic, dynamic>>[
         FormBlocLoading<String, String>(
             isEditing: true, isValidByStep: {}, progress: 0.0),
         FormBlocLoadFailed<String, String>(

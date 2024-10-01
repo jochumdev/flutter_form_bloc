@@ -1,6 +1,6 @@
 name: form_bloc_web
 description: Easy Form State Management using BLoC pattern. Separate the Form State and Business Logic from the User Interface.
-version: 1.0.0
+version: 0.32.0
 publish_to: none
 
 environment:

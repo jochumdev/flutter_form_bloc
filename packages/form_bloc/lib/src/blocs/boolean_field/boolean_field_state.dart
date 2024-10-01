@@ -12,9 +12,9 @@ class BooleanFieldBlocState<ExtraData>
     required Suggestions<bool>? suggestions,
     required bool isValidated,
     required bool isValidating,
-    FormBloc? formBloc,
+    FormBloc<dynamic, dynamic>? formBloc,
     required String name,
-    List additionalProps = const <dynamic>[],
+    List<dynamic> additionalProps = const <dynamic>[],
     dynamic Function(bool value)? toJson,
     ExtraData? extraData,
   }) : super(
@@ -44,7 +44,7 @@ class BooleanFieldBlocState<ExtraData>
     Param<Suggestions<bool>?>? suggestions,
     bool? isValidated,
     bool? isValidating,
-    Param<FormBloc?>? formBloc,
+    Param<FormBloc<dynamic, dynamic>?>? formBloc,
     Param<ExtraData?>? extraData,
   }) {
     return BooleanFieldBlocState(

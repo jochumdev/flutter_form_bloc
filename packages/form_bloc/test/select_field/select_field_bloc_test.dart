@@ -51,8 +51,8 @@ void main() {
     });
 
     test('initial state.', () {
-      SelectFieldBloc fieldBloc;
-      SelectFieldBlocState initialState;
+      SelectFieldBloc<dynamic, dynamic> fieldBloc;
+      SelectFieldBlocState<dynamic, dynamic> initialState;
 
       fieldBloc = SelectFieldBloc<bool, dynamic>(
         name: 'name',
@@ -150,7 +150,7 @@ void main() {
 
       expect(
         fieldBloc.stream,
-        emitsInOrder(<SelectFieldBlocState>[expectedState]),
+        emitsInOrder(<SelectFieldBlocState<dynamic, dynamic>>[expectedState]),
       );
 
       fieldBloc.updateItems([false]);
@@ -250,7 +250,7 @@ void main() {
 
       expect(
         fieldBloc.stream,
-        emitsInOrder(<SelectFieldBlocState>[expectedState]),
+        emitsInOrder(<SelectFieldBlocState<dynamic, dynamic>>[expectedState]),
       );
 
       fieldBloc.removeItem(true);

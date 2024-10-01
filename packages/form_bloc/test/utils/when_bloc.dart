@@ -34,7 +34,7 @@ void expectState<TState>(TState actual, TState expected) {
   }
 }
 
-Future expectBloc<State>(
+Future<dynamic> expectBloc<State>(
   BlocBase<State> bloc, {
   State? initalState,
   FutureOr<void> Function()? act,
@@ -65,7 +65,7 @@ String _identical(String str) => '\u001b[90m$str\u001B[0m';
 String _deletion(String str) => '\u001b[31m[-$str-]\u001B[0m';
 String _insertion(String str) => '\u001b[32m{+$str+}\u001B[0m';
 
-String _decorateDiffResult(ItemResult result) {
+String _decorateDiffResult(ItemResult<dynamic, dynamic> result) {
   final str =
       '${'${result.left ?? ''}'.padRight(50, ' ')}${result.right ?? ''}';
   switch (result.state) {

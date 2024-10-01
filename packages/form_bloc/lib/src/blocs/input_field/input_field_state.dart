@@ -12,9 +12,9 @@ class InputFieldBlocState<Value, ExtraData>
     required Suggestions<Value>? suggestions,
     required bool isValidated,
     required bool isValidating,
-    FormBloc? formBloc,
+    FormBloc<dynamic, dynamic>? formBloc,
     required String name,
-    List additionalProps = const <dynamic>[],
+    List<dynamic> additionalProps = const <dynamic>[],
     dynamic Function(Value value)? toJson,
     ExtraData? extraData,
   }) : super(
@@ -44,7 +44,7 @@ class InputFieldBlocState<Value, ExtraData>
     Param<Suggestions<Value>?>? suggestions,
     bool? isValidated,
     bool? isValidating,
-    Param<FormBloc?>? formBloc,
+    Param<FormBloc<dynamic, dynamic>?>? formBloc,
     Param<ExtraData?>? extraData,
   }) {
     return InputFieldBlocState(

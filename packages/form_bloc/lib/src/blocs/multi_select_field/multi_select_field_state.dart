@@ -14,7 +14,7 @@ class MultiSelectFieldBlocState<Value, ExtraData>
     required Suggestions<Value>? suggestions,
     required bool isValidated,
     required bool isValidating,
-    FormBloc? formBloc,
+    FormBloc<dynamic, dynamic>? formBloc,
     required String name,
     this.items = const [],
     dynamic Function(List<Value> value)? toJson,
@@ -46,7 +46,7 @@ class MultiSelectFieldBlocState<Value, ExtraData>
     Param<Suggestions<Value>?>? suggestions,
     bool? isValidated,
     bool? isValidating,
-    Param<FormBloc?>? formBloc,
+    Param<FormBloc<dynamic, dynamic>?>? formBloc,
     List<Value>? items,
     Param<ExtraData?>? extraData,
   }) {

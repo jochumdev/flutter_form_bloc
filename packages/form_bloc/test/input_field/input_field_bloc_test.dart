@@ -50,8 +50,8 @@ void main() {
     });
 
     test('initial state.', () {
-      InputFieldBloc fieldBloc;
-      InputFieldBlocState initialState;
+      InputFieldBloc<dynamic, dynamic> fieldBloc;
+      InputFieldBlocState<dynamic, dynamic> initialState;
 
       fieldBloc = InputFieldBloc<bool?, dynamic>(
         name: 'name',

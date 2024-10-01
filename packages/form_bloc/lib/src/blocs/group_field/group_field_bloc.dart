@@ -5,7 +5,7 @@ class GroupFieldBlocState<T extends FieldBloc, ExtraData>
   final Map<String, T> fieldBlocs;
 
   GroupFieldBlocState({
-    required FormBloc? formBloc,
+    required FormBloc<dynamic, dynamic>? formBloc,
     required String name,
     required bool isValidating,
     required bool isValid,
@@ -24,7 +24,7 @@ class GroupFieldBlocState<T extends FieldBloc, ExtraData>
 
   @override
   GroupFieldBlocState<T, ExtraData> copyWith({
-    Param<FormBloc?>? formBloc,
+    Param<FormBloc<dynamic, dynamic>?>? formBloc,
     bool? isValidating,
     bool? isValid,
     Param<ExtraData>? extraData,

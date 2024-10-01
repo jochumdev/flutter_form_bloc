@@ -49,8 +49,8 @@ void main() {
       });
 
       test('initial state.', () {
-        BooleanFieldBloc fieldBloc;
-        BooleanFieldBlocState initialState;
+        BooleanFieldBloc<dynamic> fieldBloc;
+        BooleanFieldBlocState<dynamic> initialState;
 
         fieldBloc = BooleanFieldBloc<dynamic>(
           name: 'name',
@@ -96,8 +96,8 @@ void main() {
       });
 
       test('if the initialValue is not passed, it will be false', () {
-        BooleanFieldBloc fieldBloc;
-        BooleanFieldBlocState initialState;
+        BooleanFieldBloc<dynamic> fieldBloc;
+        BooleanFieldBlocState<dynamic> initialState;
 
         fieldBloc = BooleanFieldBloc<dynamic>(name: 'name');
 

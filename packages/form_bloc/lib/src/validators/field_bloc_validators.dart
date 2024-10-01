@@ -80,7 +80,7 @@ class FieldBlocValidators {
   /// Returns [FieldBlocValidatorsErrors.passwordMin6Chars]
   /// if is not valid.
   static Validator<String?> confirmPassword(
-    TextFieldBloc passwordTextFieldBloc,
+    TextFieldBloc<dynamic> passwordTextFieldBloc,
   ) {
     return (String? confirmPassword) {
       if (confirmPassword == null ||

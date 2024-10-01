@@ -200,8 +200,8 @@ abstract class FormBlocState<SuccessResponse, FailureResponse>
       multiSelectFieldBlocOf<Value, ExtraData>(String name) =>
           _singleFieldBlocOf(name);
 
-  GroupFieldBloc? groupFieldBlocOf(String name) =>
-      _fieldBlocOf<GroupFieldBloc>(name);
+  GroupFieldBloc<FieldBloc<FieldBlocStateBase>, dynamic>? groupFieldBlocOf(String name) =>
+      _fieldBlocOf<GroupFieldBloc<FieldBloc<FieldBlocStateBase>, dynamic>>(name);
 
   ListFieldBloc<T, dynamic>? listFieldBlocOf<T extends FieldBloc>(
           String name) =>
