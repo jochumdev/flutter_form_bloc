@@ -12,13 +12,14 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_bloc: ^8.1.6
-  form_bloc: ^0.31.0
+  flutter_bloc: '>=9.0.0 <10.0.0'
+  form_bloc:
+    path: ../form_bloc
   equatable: ^2.0.5
-  rxdart: ^0.27.3
+  rxdart: '>=0.28.0 <0.29.0'
   flutter_keyboard_visibility: ^6.0.0
-  collection: ^1.18.0
-  intl: ^0.19.0
+  collection: ^1.19.0
+  intl: '>=0.20.0 <0.21.0'
 
 dev_dependencies:
   flutter_test:

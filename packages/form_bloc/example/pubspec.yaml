@@ -7,7 +7,8 @@ environment:
   sdk: "^3.5.3"
 
 dependencies:
-  form_bloc: ^0.32.0
+  form_bloc:
+    path: ../
 
 dev_dependencies:
   lints: ^1.0.1
